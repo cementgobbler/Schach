@@ -2,7 +2,7 @@
     -count turns
 
 -implement captures
-    
--check edge cases
+
+-edge cases checken
 
 -notation output

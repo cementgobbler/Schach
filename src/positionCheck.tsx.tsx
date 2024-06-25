@@ -1,6 +1,3 @@
-import Pieces, { Piece } from './Pieces'
-
-
 export function checkRow(Square: String) {
     if (Square.endsWith("1")) {
         return 0
