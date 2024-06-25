@@ -487,89 +487,47 @@ export function moveLegal(piece: Piece, square: string, whiteTurn: boolean = tru
     else return false
 
   } else if (piece.pieceType == "wK" || piece.pieceType == "bK") {
-    /* 
-  
-    if (
-        row of ArrayField(square) == row of ArrayField(piece.oldBoardPosition)
-    AND (
-      column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition) - 1
-    OR
-      column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition) + 1
-    ) AND
-      9 > column of ArrayField(square) > 0 ) {
-  
-      } else if (
-        column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition)
-    AND (
-      row of ArrayField(square) == row of ArrayField(piece.oldBoardPosition) - 1
-    OR
-      row of ArrayField(square) ==  of ArrayField(piece.oldBoardPosition) + 1
-    ) AND
-      9 > row of ArrayField(square) > 0 ) {
-  
-      } else if ( 
-        row of ArrayField(square) == row of ArrayField(piece.oldBoardPosition) - 1
-      AND
-        column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition) - 1
-      AND
-        9 > row of ArrayField(square) > 0
-      AND
-        9 > column of ArrayField(square) > 0 ) {
-      
-        ((write legal squares into list +k(x<0) ))
-        ((check for occupying pieces in path +k(x<0) ))
-        ((for all squares between occupying pieces/board border return true))
-        ((for the occupying pieces of opposite color return true))
-          
-        }
-        else if ( 
-          row of ArrayField(square) == row of ArrayField(piece.oldBoardPosition) + 1
-        AND
-          column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition) + 1
-        AND
-          9 > row of ArrayField(square) > 0
-        AND
-          9 > column of ArrayField(square) > 0 ) {
-  
-          ((write legal squares into list +k(x>0) ))
-          ((check for occupying pieces in path +k(x>0) ))
-          ((for all squares between occupying pieces/board border return true))
-          ((for the occupying pieces of opposite color return true))
-  
-          } 
-          else if ( row of ArrayField(square) == row of ArrayField(piece.oldBoardPosition) + 1
-        AND
-          column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition) - 1
-        AND
-          9 > row of ArrayField(square) > 0
-        AND
-          9 > column of ArrayField(square) > 0 ) {
-  
-          ((write legal squares into list -k(x<0) ))
-          ((check for occupying pieces in path -k(x<0) ))
-          ((for all squares between occupying pieces/board border return true))
-          ((for the occupying pieces of opposite color return true))
-  
-          } 
-          else if ( row of ArrayField(square) == row of ArrayField(piece.oldBoardPosition) - 1
-        AND
-          column of ArrayField(square) == column of ArrayField(piece.oldBoardPosition) + 1
-        AND
-          9 > row of ArrayField(square) > 0
-        AND
-          9 > column of ArrayField(square) > 0 ) {
-  
-          ((write legal squares into list -k(x>0) ))
-          ((check for occupying pieces in path -k(x>0) ))
-          ((for all squares between occupying pieces/board border return true))
-          ((for the occupying pieces of opposite color return true))
-  
-          }
-       
-  
-    */
+    
+    //check for captures/obstacles
 
+    if (
+      columnNew == columnOld
+      && (
+      rowNew == rowOld - 1
+      ||
+      rowNew == rowOld + 1
+    )
+  ) {
     return true
+  } else if (
+      rowNew == rowOld
+      && (
+      columnNew == columnOld - 1
+      ||
+      columnNew == columnOld + 1
+   )
+  ) {
+    return true
+  } else if (
+    rowNew == rowOld -1
+    && (
+    columnNew == columnOld - 1
+    ||
+    columnNew == columnOld + 1
+    ) 
+  ) {
+    return true
+  } else if (
+    rowNew == rowOld + 1
+    && (
+      columnNew == columnOld - 1
+      ||
+      columnNew == columnOld + 1
+    )
+  ) {
+    return true
+  }
+    else return false
 
   } else return false
 }
