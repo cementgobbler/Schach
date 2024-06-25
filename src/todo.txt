@@ -1,0 +1,13 @@
+-legal moves für jedes piece als funktion mit bezug auf das array und die momentane position deklarieren
+    -prüfen, ob legal move highlighting wie angedacht funktioniert
+
+-legal moves funktion in neue datei auslagern
+
+-github!!
+
+-turns einführen
+    -runden zählen
+    
+-edge cases checken
+
+-notation output
