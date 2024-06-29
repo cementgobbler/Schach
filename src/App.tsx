@@ -116,9 +116,6 @@ function ColorMap(defaultOrientation: boolean) {
 
 ColorMap(true)
 
-//    PlyCount = PlyCount + 1
-//    Turn = Math.floor(RoundCount/2) 
-
 
 function App() {
   const [_selectedPiece, _selectPiece] = useState<Piece>()
@@ -149,7 +146,7 @@ function App() {
 
   }
 
-  function pieceSelect(square: Square) {
+  function makeTurn(square: Square) {
 
     HighlightSelect.boardPosition = []
     HighlightLegal.boardPosition = []
@@ -170,9 +167,6 @@ function App() {
 
       HighlightLegal.boardPosition = legalMoves(Piece)
 
-
-      console.log("pieceSelect")
-
     } else {
 
       if (moveLegal(_selectedPiece, square.squareBoardPosition)) {
@@ -180,6 +174,10 @@ function App() {
         _selectedPiece.oldBoardPosition = _selectedPiece.newBoardPosition
         _selectedPiece.newBoardPosition = square.squareBoardPosition
         console.log("pieceMove")
+        _selectPiece(undefined)
+
+      } else {
+
         _selectPiece(undefined)
 
       }
@@ -198,7 +196,7 @@ function App() {
           GridArray.map((row, _rowIndex) => (
             row.map((square, _squareIndex) => (
               <>
-                <div className='square' onClick={() => pieceSelect(square)} style={{ backgroundColor: square.Color }} key={square.squareBoardPosition}>
+                <div className='square' onClick={() => makeTurn(square)} style={{ backgroundColor: square.Color }} key={square.squareBoardPosition}>
 
                   <div className='CoordinateNumber' style={{ color: square.TextColor }}>{square.CoordinateNumber}</div>
                   <div className='CoordinateLetter' style={{ color: square.TextColor }}>{square.CoordinateLetter}</div>
