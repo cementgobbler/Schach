@@ -3,230 +3,296 @@ export type Piece = {
     pieceID: string
     oldBoardPosition: string
     newBoardPosition: string
+    captured: boolean
+    canCastle: boolean
 }
 
 const wP_a: Piece = {
     pieceType: "wP",
     pieceID: "11",
     oldBoardPosition: "",
-    newBoardPosition: "a2"
+    newBoardPosition: "a2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_b: Piece = {
     pieceType: "wP",
     pieceID: "12",
     oldBoardPosition: "",
-    newBoardPosition: "b2"
+    newBoardPosition: "b2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_c: Piece = {
     pieceType: "wP",
     pieceID: "13",
     oldBoardPosition: "",
-    newBoardPosition: "c2"
+    newBoardPosition: "c2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_d: Piece = {
     pieceType: "wP",
     pieceID: "14",
     oldBoardPosition: "",
-    newBoardPosition: "d2"
+    newBoardPosition: "d2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_e: Piece = {
     pieceType: "wP",
     pieceID: "15",
     oldBoardPosition: "",
-    newBoardPosition: "e2"
+    newBoardPosition: "e2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_f: Piece = {
     pieceType: "wP",
     pieceID: "16",
     oldBoardPosition: "",
-    newBoardPosition: "f2"
+    newBoardPosition: "f2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_g: Piece = {
     pieceType: "wP",
     pieceID: "17",
     oldBoardPosition: "",
-    newBoardPosition: "g2"
+    newBoardPosition: "g2",
+    captured: false,
+    canCastle: false
 }
 
 const wP_h: Piece = {
     pieceType: "wP",
     pieceID: "18",
     oldBoardPosition: "",
-    newBoardPosition: "h2"
+    newBoardPosition: "h2",
+    captured: false,
+    canCastle: false
 }
 
 const wR_B: Piece = {
     pieceType: "wR",
     pieceID: "21",
     oldBoardPosition: "",
-    newBoardPosition: "a1"
+    newBoardPosition: "a1",
+    captured: false,
+    canCastle: true
 }
 
 const wN_W: Piece = {
     pieceType: "wN",
     pieceID: "22",
     oldBoardPosition: "",
-    newBoardPosition: "b1"
+    newBoardPosition: "b1",
+    captured: false,
+    canCastle: false
 }
 
 const wB_B: Piece = {
     pieceType: "wB",
     pieceID: "23",
     oldBoardPosition: "",
-    newBoardPosition: "c1"
+    newBoardPosition: "c1",
+    captured: false,
+    canCastle: false
 }
 
 const wQ: Piece = {
     pieceType: "wQ",
     pieceID: "24",
     oldBoardPosition: "",
-    newBoardPosition: "d1"
+    newBoardPosition: "d1",
+    captured: false,
+    canCastle: false
 }
 
 const wK: Piece = {
     pieceType: "wK",
     pieceID: "25",
     oldBoardPosition: "",
-    newBoardPosition: "e1"
+    newBoardPosition: "e1",
+    captured: false,
+    canCastle: true
 }
 
 const wB_W: Piece = {
     pieceType: "wB",
     pieceID: "26",
     oldBoardPosition: "",
-    newBoardPosition: "f1"
+    newBoardPosition: "f1",
+    captured: false,
+    canCastle: false
 }
 
 const wN_B: Piece = {
     pieceType: "wN",
     pieceID: "27",
     oldBoardPosition: "",
-    newBoardPosition: "g1"
+    newBoardPosition: "g1",
+    captured: false,
+    canCastle: false
 }
 
 const wR_W: Piece = {
     pieceType: "wR",
     pieceID: "28",
     oldBoardPosition: "",
-    newBoardPosition: "h1"
+    newBoardPosition: "h1",
+    captured: false,
+    canCastle: true
 }
 
 const bP_a: Piece = {
     pieceType: "bP",
     pieceID: "31",
     oldBoardPosition: "",
-    newBoardPosition: "a7"
+    newBoardPosition: "a7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_b: Piece = {
     pieceType: "bP",
     pieceID: "32",
     oldBoardPosition: "",
-    newBoardPosition: "b7"
+    newBoardPosition: "b7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_c: Piece = {
     pieceType: "bP",
     pieceID: "33",
     oldBoardPosition: "",
-    newBoardPosition: "c7"
+    newBoardPosition: "c7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_d: Piece = {
     pieceType: "bP",
     pieceID: "34",
     oldBoardPosition: "",
-    newBoardPosition: "d7"
+    newBoardPosition: "d7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_e: Piece = {
     pieceType: "bP",
     pieceID: "35",
     oldBoardPosition: "",
-    newBoardPosition: "e7"
+    newBoardPosition: "e7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_f: Piece = {
     pieceType: "bP",
     pieceID: "36",
     oldBoardPosition: "",
-    newBoardPosition: "f7"
+    newBoardPosition: "f7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_g: Piece = {
     pieceType: "bP",
     pieceID: "37",
     oldBoardPosition: "",
-    newBoardPosition: "g7"
+    newBoardPosition: "g7",
+    captured: false,
+    canCastle: false
 }
 
 const bP_h: Piece = {
     pieceType: "bP",
     pieceID: "38",
     oldBoardPosition: "",
-    newBoardPosition: "h7"
+    newBoardPosition: "h7",
+    captured: false,
+    canCastle: false
 }
 
 const bR_W: Piece = {
     pieceType: "bR",
     pieceID: "41",
     oldBoardPosition: "",
-    newBoardPosition: "a8"
+    newBoardPosition: "a8",
+    captured: false,
+    canCastle: true
 }
 
 const bN_B: Piece = {
     pieceType: "bN",
     pieceID: "42",
     oldBoardPosition: "",
-    newBoardPosition: "b8"
+    newBoardPosition: "b8",
+    captured: false,
+    canCastle: false
 }
 
 const bB_W: Piece = {
     pieceType: "bB",
     pieceID: "43",
     oldBoardPosition: "",
-    newBoardPosition: "c8"
+    newBoardPosition: "c8",
+    captured: false,
+    canCastle: false
 }
 
 const bQ: Piece = {
     pieceType: "bQ",
     pieceID: "44",
     oldBoardPosition: "",
-    newBoardPosition: "d8"
+    newBoardPosition: "d8",
+    captured: false,
+    canCastle: false
 }
 
 const bK: Piece = {
     pieceType: "bK",
     pieceID: "45",
     oldBoardPosition: "",
-    newBoardPosition: "e8"
+    newBoardPosition: "e8",
+    captured: false,
+    canCastle: true
 }
 
 const bB_B: Piece = {
     pieceType: "bB",
     pieceID: "46",
     oldBoardPosition: "",
-    newBoardPosition: "f8"
+    newBoardPosition: "f8",
+    captured: false,
+    canCastle: false
 }
 
 const bN_W: Piece = {
     pieceType: "bN",
     pieceID: "47",
     oldBoardPosition: "",
-    newBoardPosition: "g8"
+    newBoardPosition: "g8",
+    captured: false,
+    canCastle: false
 }
 
 const bR_B: Piece = {
     pieceType: "bR",
     pieceID: "48",
     oldBoardPosition: "",
-    newBoardPosition: "h8"
+    newBoardPosition: "h8",
+    captured: false,
+    canCastle: true
 }
 
 let Pieces: Piece[] =

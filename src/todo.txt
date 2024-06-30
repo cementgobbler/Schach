@@ -1,7 +1,6 @@
--implement turns
-    -count turns
-
 -implement captures
+
+-translate move details into notation
 
 -check edge cases
 

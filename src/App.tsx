@@ -46,7 +46,11 @@ var move: number
 
 export function checkPiece(square: string) {
   for (let i = 0; i < Pieces.length; i++) {
-    if (Pieces[i].newBoardPosition == square)
+    if (
+      Pieces[i].newBoardPosition == square
+      &&
+      Pieces[i].captured == false
+    )
       return Pieces[i]
   }
 
@@ -209,6 +213,14 @@ function App() {
         _selectedPiece.newBoardPosition = square.squareBoardPosition
 
         console.log(_selectedPiece.pieceType, _selectedPiece.newBoardPosition)
+
+        console.log("Can castle on this move:", _selectedPiece.canCastle)
+
+        if (_selectedPiece.canCastle == true) {
+          _selectedPiece.canCastle = false
+        }
+
+        console.log("Can still castle:", _selectedPiece.canCastle)
 
         _selectPiece(undefined)
         
