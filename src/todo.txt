@@ -1,4 +1,5 @@
--implement captures
+-list captured pieces per side
+    -list pieces starting with w / b where captured = true, write to list
 
 -translate move details into notation
 
