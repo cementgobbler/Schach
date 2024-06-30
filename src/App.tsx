@@ -156,7 +156,7 @@ function App() {
       }
 
     }
-    //console.log(moveList)
+    
     return moveList
   }
 
@@ -209,22 +209,20 @@ function App() {
 
       if (moveLegal(_selectedPiece, square.squareBoardPosition)) {
 
+        if (Piece !== undefined) {
+          Piece.captured = true
+        }
+
         _selectedPiece.oldBoardPosition = _selectedPiece.newBoardPosition
         _selectedPiece.newBoardPosition = square.squareBoardPosition
 
         console.log(_selectedPiece.pieceType, _selectedPiece.newBoardPosition)
 
-        console.log("Can castle on this move:", _selectedPiece.canCastle)
-
         if (_selectedPiece.canCastle == true) {
           _selectedPiece.canCastle = false
         }
 
-        console.log("Can still castle:", _selectedPiece.canCastle)
-
         _selectPiece(undefined)
-        
-        
         
         move = move + 1
 
