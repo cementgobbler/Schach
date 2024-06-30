@@ -43,7 +43,6 @@ var HighlightLegal: Highlight = {
 }
 
 var move: number
-var whiteToMove: boolean
 
 export function checkPiece(square: string) {
   for (let i = 0; i < Pieces.length; i++) {
@@ -57,14 +56,19 @@ export function chessTurn(move: number) {
 
   let turn = Math.ceil(move/2)
   console.log("Move:",move,"Turn:",turn)
-  if (move % 2 == 0) {
-    whiteToMove = true
-    console.log("white to move")
-  } else {
-    whiteToMove = false
-    console.log("black to move")
+  
   }
 
+
+
+export function whiteToMove() {
+  if (move % 2 == 0) {
+    return true
+    console.log("white to move")
+  } else {
+    return false
+    console.log("black to move")
+}
 }
 
 function ColorMap(defaultOrientation: boolean) {
@@ -148,7 +152,7 @@ function App() {
       }
 
     }
-    console.log(moveList)
+    //console.log(moveList)
     return moveList
   }
 
@@ -173,7 +177,19 @@ function App() {
     if (_selectedPiece == undefined) {
       if (Piece == undefined) {
 
+        return
 
+      } else if (
+        Piece.pieceType.startsWith("w")
+        &&
+        whiteToMove() == false
+      ) {
+        return
+      } else if (
+        Piece.pieceType.startsWith("b")
+        &&
+        whiteToMove() == true
+      ) {
         return
       }
 
@@ -192,9 +208,11 @@ function App() {
         _selectedPiece.oldBoardPosition = _selectedPiece.newBoardPosition
         _selectedPiece.newBoardPosition = square.squareBoardPosition
 
+        console.log(_selectedPiece.pieceType, _selectedPiece.newBoardPosition)
+
         _selectPiece(undefined)
         
-        console.log("marker #1")
+        
         
         move = move + 1
 

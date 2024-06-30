@@ -4,16 +4,15 @@ import { checkColumn, checkRow } from './positionCheck.tsx'
 import { Piece } from './Pieces'
 import { checkSquare } from './positionCheck.tsx'
 
-export function moveLegal(piece: Piece, square: string, whiteTurn: boolean = true) {
+export function moveLegal(piece: Piece, square: string) {
 
   const columnNew: number = checkColumn(square)
   const columnOld: number = checkColumn(piece.oldBoardPosition)
   const rowNew: number = checkRow(square)
   const rowOld: number = checkRow(piece.oldBoardPosition)
-
-  console.log(piece, columnNew, rowNew, checkPiece(checkSquare(columnNew, rowNew)))
-
-  if (piece.pieceType == "wP") {
+ 
+  //console.log(piece, columnNew, rowNew, checkPiece(checkSquare(columnNew, rowNew)))
+ if (piece.pieceType == "wP") {
     if (rowOld == 1) {
       if ( //move forward 1 or 2 squares
         columnNew == columnOld
