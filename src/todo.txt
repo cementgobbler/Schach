@@ -1,8 +1,14 @@
 -list captured pieces per side
     -list pieces starting with w / b where captured = true, write to list
+    -externalize this function
+        -have import "Pieces"
+        -call/update with every move
 
 -translate move details into notation
+    -simply translate piece _selectedPiece + newBoardPosition into strings and combine
+        -maybe create property "notation symbol" for each piece type?
 
 -check edge cases
 
 -notation output
+    -write each string into text file according to .pgn-file format
