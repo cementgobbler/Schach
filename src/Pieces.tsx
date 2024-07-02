@@ -1,4 +1,5 @@
 export type Piece = {
+    pieceNotation: string
     pieceType: string
     pieceID: string
     oldBoardPosition: string
@@ -8,6 +9,7 @@ export type Piece = {
 }
 
 const wP_a: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "11",
     oldBoardPosition: "",
@@ -17,6 +19,7 @@ const wP_a: Piece = {
 }
 
 const wP_b: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "12",
     oldBoardPosition: "",
@@ -26,6 +29,7 @@ const wP_b: Piece = {
 }
 
 const wP_c: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "13",
     oldBoardPosition: "",
@@ -35,6 +39,7 @@ const wP_c: Piece = {
 }
 
 const wP_d: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "14",
     oldBoardPosition: "",
@@ -44,6 +49,7 @@ const wP_d: Piece = {
 }
 
 const wP_e: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "15",
     oldBoardPosition: "",
@@ -53,6 +59,7 @@ const wP_e: Piece = {
 }
 
 const wP_f: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "16",
     oldBoardPosition: "",
@@ -62,6 +69,7 @@ const wP_f: Piece = {
 }
 
 const wP_g: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "17",
     oldBoardPosition: "",
@@ -71,6 +79,7 @@ const wP_g: Piece = {
 }
 
 const wP_h: Piece = {
+    pieceNotation: "",
     pieceType: "wP",
     pieceID: "18",
     oldBoardPosition: "",
@@ -80,6 +89,7 @@ const wP_h: Piece = {
 }
 
 const wR_B: Piece = {
+    pieceNotation: "R",
     pieceType: "wR",
     pieceID: "21",
     oldBoardPosition: "",
@@ -89,6 +99,7 @@ const wR_B: Piece = {
 }
 
 const wN_W: Piece = {
+    pieceNotation: "N",
     pieceType: "wN",
     pieceID: "22",
     oldBoardPosition: "",
@@ -98,6 +109,7 @@ const wN_W: Piece = {
 }
 
 const wB_B: Piece = {
+    pieceNotation: "B",
     pieceType: "wB",
     pieceID: "23",
     oldBoardPosition: "",
@@ -107,6 +119,7 @@ const wB_B: Piece = {
 }
 
 const wQ: Piece = {
+    pieceNotation: "Q",
     pieceType: "wQ",
     pieceID: "24",
     oldBoardPosition: "",
@@ -116,6 +129,7 @@ const wQ: Piece = {
 }
 
 const wK: Piece = {
+    pieceNotation: "K",
     pieceType: "wK",
     pieceID: "25",
     oldBoardPosition: "",
@@ -125,6 +139,7 @@ const wK: Piece = {
 }
 
 const wB_W: Piece = {
+    pieceNotation: "B",
     pieceType: "wB",
     pieceID: "26",
     oldBoardPosition: "",
@@ -134,6 +149,7 @@ const wB_W: Piece = {
 }
 
 const wN_B: Piece = {
+    pieceNotation: "N",
     pieceType: "wN",
     pieceID: "27",
     oldBoardPosition: "",
@@ -143,6 +159,7 @@ const wN_B: Piece = {
 }
 
 const wR_W: Piece = {
+    pieceNotation: "R",
     pieceType: "wR",
     pieceID: "28",
     oldBoardPosition: "",
@@ -152,6 +169,7 @@ const wR_W: Piece = {
 }
 
 const bP_a: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "31",
     oldBoardPosition: "",
@@ -161,6 +179,7 @@ const bP_a: Piece = {
 }
 
 const bP_b: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "32",
     oldBoardPosition: "",
@@ -170,6 +189,7 @@ const bP_b: Piece = {
 }
 
 const bP_c: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "33",
     oldBoardPosition: "",
@@ -179,6 +199,7 @@ const bP_c: Piece = {
 }
 
 const bP_d: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "34",
     oldBoardPosition: "",
@@ -188,6 +209,7 @@ const bP_d: Piece = {
 }
 
 const bP_e: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "35",
     oldBoardPosition: "",
@@ -197,6 +219,7 @@ const bP_e: Piece = {
 }
 
 const bP_f: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "36",
     oldBoardPosition: "",
@@ -206,6 +229,7 @@ const bP_f: Piece = {
 }
 
 const bP_g: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "37",
     oldBoardPosition: "",
@@ -215,6 +239,7 @@ const bP_g: Piece = {
 }
 
 const bP_h: Piece = {
+    pieceNotation: "",
     pieceType: "bP",
     pieceID: "38",
     oldBoardPosition: "",
@@ -224,6 +249,7 @@ const bP_h: Piece = {
 }
 
 const bR_W: Piece = {
+    pieceNotation: "R",
     pieceType: "bR",
     pieceID: "41",
     oldBoardPosition: "",
@@ -233,6 +259,7 @@ const bR_W: Piece = {
 }
 
 const bN_B: Piece = {
+    pieceNotation: "N",
     pieceType: "bN",
     pieceID: "42",
     oldBoardPosition: "",
@@ -242,6 +269,7 @@ const bN_B: Piece = {
 }
 
 const bB_W: Piece = {
+    pieceNotation: "B",
     pieceType: "bB",
     pieceID: "43",
     oldBoardPosition: "",
@@ -251,6 +279,7 @@ const bB_W: Piece = {
 }
 
 const bQ: Piece = {
+    pieceNotation: "Q",
     pieceType: "bQ",
     pieceID: "44",
     oldBoardPosition: "",
@@ -260,6 +289,7 @@ const bQ: Piece = {
 }
 
 const bK: Piece = {
+    pieceNotation: "K",
     pieceType: "bK",
     pieceID: "45",
     oldBoardPosition: "",
@@ -269,6 +299,7 @@ const bK: Piece = {
 }
 
 const bB_B: Piece = {
+    pieceNotation: "B",
     pieceType: "bB",
     pieceID: "46",
     oldBoardPosition: "",
@@ -278,6 +309,7 @@ const bB_B: Piece = {
 }
 
 const bN_W: Piece = {
+    pieceNotation: "N",
     pieceType: "bN",
     pieceID: "47",
     oldBoardPosition: "",
@@ -287,6 +319,7 @@ const bN_W: Piece = {
 }
 
 const bR_B: Piece = {
+    pieceNotation: "R",
     pieceType: "bR",
     pieceID: "48",
     oldBoardPosition: "",
