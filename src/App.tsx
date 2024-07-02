@@ -44,6 +44,12 @@ var HighlightLegal: Highlight = {
 }
 
 var move: number
+var capture: boolean
+var logCapture: string
+var check: boolean
+var logCheck: string
+var checkmate: boolean
+var logCheckmate: string
 
 export function checkPiece(square: string) {
   for (let i = 0; i < Pieces.length; i++) {
@@ -64,6 +70,42 @@ export function chessTurn(move: number) {
 
 }
 
+function notationOutpout(
+  move: number,
+  capture: boolean,
+  logCapture: string,
+  check: boolean,
+  logCheck: string,
+  checkmate: boolean,
+  logCheckmate: string,
+  pieceNotation: string,
+  newBoardPosition:string
+) {
+  if (
+    capture == true
+   ) {
+    logCapture = 'x'
+  } else {
+    logCapture = ''
+  }
+
+  if (
+    check == true
+  ) {
+    logCheck = '+'
+  } else {
+    logCheck = ''
+  }
+  
+  if (
+    checkmate == true
+  ) {
+    logCheckmate = '#'
+  } else {
+    logCheckmate = ''
+  }
+  console.log(move,". ", pieceNotation,logCapture,newBoardPosition,logCheck,logCheckmate)
+}
 
 
 export function whiteToMove() {
@@ -212,22 +254,40 @@ function App() {
 
         if (Piece !== undefined) {
           Piece.captured = true
+          capture = true
         }
 
         _selectedPiece.oldBoardPosition = _selectedPiece.newBoardPosition
         _selectedPiece.newBoardPosition = square.squareBoardPosition
 
-        console.log(_selectedPiece.pieceType, _selectedPiece.newBoardPosition)
+        console.log(_selectedPiece.pieceNotation, _selectedPiece.newBoardPosition)
 
         if (_selectedPiece.canCastle == true) {
           _selectedPiece.canCastle = false
         }
 
-        _selectPiece(undefined)
-
         move = move + 1
 
         chessTurn(move)
+
+        notationOutpout(
+          move,
+          capture,
+          logCapture,
+          check,
+          logCheck,
+          checkmate,
+          logCheckmate,    
+          _selectedPiece.pieceNotation,
+          _selectedPiece.newBoardPosition
+          )
+
+        _selectPiece(undefined)
+
+        
+
+
+
 
       } else {
 
@@ -235,7 +295,7 @@ function App() {
 
       }
 
-
+      capture = false
 
 
     }
