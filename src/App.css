@@ -1,4 +1,4 @@
-#wrapper {
+#boardWrapper {
   height: min(90vh, 90vw);
   width: min(90vh, 90vw);
   background-color: antiquewhite;
@@ -52,6 +52,19 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 4;
+}
+
+#infoWrapper {
+  height: min(90vh, 90vw);
+  width: min(20vh, 20vw);
+  background-color: dimgray;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.materialList {
+  height:fit-content
 }
 
 #root {

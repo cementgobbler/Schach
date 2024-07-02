@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'*/
 import './App.css'
 import Pieces, { Piece } from './Pieces'
 import { moveLegal } from './checkMoveLegal'
+import { checkMaterial } from './materialCheck'
 
 let GridArray: Square[][] = [
   /*["a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8"],
@@ -58,10 +59,10 @@ export function checkPiece(square: string) {
 
 export function chessTurn(move: number) {
 
-  let turn = Math.ceil(move/2)
-  console.log("Move:",move,"Turn:",turn)
-  
-  }
+  let turn = Math.ceil(move / 2)
+  console.log("Move:", move, "Turn:", turn)
+
+}
 
 
 
@@ -72,7 +73,7 @@ export function whiteToMove() {
   } else {
     return false
     console.log("black to move")
-}
+  }
 }
 
 function ColorMap(defaultOrientation: boolean) {
@@ -156,7 +157,7 @@ function App() {
       }
 
     }
-    
+
     return moveList
   }
 
@@ -223,7 +224,7 @@ function App() {
         }
 
         _selectPiece(undefined)
-        
+
         move = move + 1
 
         chessTurn(move)
@@ -240,10 +241,17 @@ function App() {
     }
   }
 
+/*   function listMaterialWhite() {
+    checkMaterial()?.pieceType.startsWith('w')
+  }
 
+  function listMaterialBlack() {
+    checkMaterial()?.pieceType.startsWith('b')
+  } */
+  
   return (
     <>
-      <div id='wrapper'>
+      <div id='boardWrapper'>
         {
           GridArray.map((row, _rowIndex) => (
             row.map((square, _squareIndex) => (
@@ -264,6 +272,8 @@ function App() {
             )
           ))
         }
+{/*       </div>
+      <div id='infoWrapper'> */}
       </div>
     </>
   )
