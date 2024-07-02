@@ -10,5 +10,7 @@
 
 -check edge cases
 
+-proper indices for mapping rows and squares in the grid array html
+
 -notation output
     -write each string into text file according to .pgn-file format
