@@ -78,8 +78,7 @@ function notationOutpout(
   logCheck: string,
   checkmate: boolean,
   logCheckmate: string,
-  pieceNotation: string,
-  newBoardPosition:string
+  _selectedPiece: Piece,
 ) {
   if (
     capture == true
