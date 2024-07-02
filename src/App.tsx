@@ -103,7 +103,15 @@ function notationOutpout(
   } else {
     logCheckmate = ''
   }
-  console.log(move,". ", pieceNotation,logCapture,newBoardPosition,logCheck,logCheckmate)
+
+  console.log(
+    move,
+    ". ",
+    _selectedPiece.pieceNotation,
+    logCapture,
+    _selectedPiece.newBoardPosition,
+    logCheck,
+    logCheckmate)
 }
 
 
@@ -277,8 +285,7 @@ function App() {
           logCheck,
           checkmate,
           logCheckmate,    
-          _selectedPiece.pieceNotation,
-          _selectedPiece.newBoardPosition
+          _selectedPiece
           )
 
         _selectPiece(undefined)
